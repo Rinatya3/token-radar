@@ -76,6 +76,8 @@ export interface LiveRow {
   category: string | null;
   chains: string[];
   tvl_usd: number;
+  change_7d: number | null;
+  age_days: number | null;
   symbol: string | null;
   mcap_usd: number | null;
   valued_by: 'market' | 'model';
@@ -407,6 +409,8 @@ export function buildRadar(snapshot: Snapshot): { board: BoardRow[]; radar: Rada
         category: p.category,
         chains: p.chains,
         tvl_usd: p.tvl_usd,
+        change_7d: p.change_7d,
+        age_days: v.age,
         symbol: p.symbol,
         mcap_usd: p.mcap_usd,
         valued_by: v.valuedBy,
